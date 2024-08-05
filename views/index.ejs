@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    
+</head>
+<%- include("header.ejs") %>
+<body>
+    <% if (locals.letter) { %>
+        <h1>There are <%=letter%> letters in your name.</h1>
+        <% } else { %>
+          <h1>Enter your name below 👇</h1>
+          <% } %>
+          <div class="container">
+            <div class="date">
+               <button class="/submit">➕</button>
+                <input type="text" name="task" class="yourtask">
+                <P>Select Date</P>
+                <input type="datetime-local" name="datetime" class="datetime" required>
+            </div>
+            <div class="task"></div>
+        </div>
+</body>
+</html>
